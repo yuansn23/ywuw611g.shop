@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<script>
+  function k2() {
+            window.open('https://wa.me/message/YOUWHATSAPPNUMBER', '_blank');
+        }
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Професионални онлајн посао - Зарадите 100-300$ дневно</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary-corporate-blue: #1a365d;
+            --secondary-steel-gray: #2d3748;
+            --accent-professional-gold: #d69e2e;
+            --background-pristine-white: #ffffff;
+            --text-primary-dark: #2d3748;
+            --text-secondary-gray: #4a5568;
+            --highlight-emerald-green: #38a169;
+            --shadow-depth-primary: 0 10px 25px rgba(26, 54, 93, 0.15);
+            --shadow-depth-secondary: 0 5px 15px rgba(45, 55, 72, 0.1);
+            --gradient-professional: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            --gradient-accent: linear-gradient(45deg, #d69e2e 0%, #f6ad55 100%);
+        }
+
+        .page-container-wrapper {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary-dark);
+            background: var(--background-pristine-white);
+            overflow-x: hidden;
+        }
+
+        .header-navigation-section {
+            background: var(--gradient-professional);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: var(--shadow-depth-primary);
+        }
+
+        .navigation-container-fluid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            text-align: center;
+        }
+
+        .main-headline-typography {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subheadline-descriptive-text {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .content-sections-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .hero-section-primary {
+            padding: 4rem 0;
+            text-align: center;
+            background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23f7fafc" opacity="0.5"/><circle cx="80" cy="80" r="1" fill="%23e2e8f0" opacity="0.3"/><circle cx="40" cy="60" r="1" fill="%23cbd5e0" opacity="0.4"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+        }
+
+        .featured-image-container {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .responsive-professional-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: var(--shadow-depth-primary);
+            transition: transform 0.3s ease;
+        }
+
+        .responsive-professional-image:hover {
+            transform: scale(1.02);
+        }
+
+        .primary-cta-button-enhanced {
+            background: var(--gradient-accent);
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: var(--shadow-depth-secondary);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 1rem 0;
+            animation: pulse-glow 2s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { 
+                transform: scale(1); 
+                box-shadow: 0 5px 15px rgba(214, 158, 46, 0.3);
+            }
+            50% { 
+                transform: scale(1.05); 
+                box-shadow: 0 8px 25px rgba(214, 158, 46, 0.5);
+            }
+        }
+
+        .primary-cta-button-enhanced:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(214, 158, 46, 0.4);
+        }
+
+        .content-section-block {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--background-pristine-white);
+            border-radius: 15px;
+            box-shadow: var(--shadow-depth-secondary);
+            border-left: 5px solid var(--accent-professional-gold);
+        }
+
+        .section-heading-primary {
+            color: var(--primary-corporate-blue);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .paragraph-content-block {
+            margin: 1rem 0;
+            color: var(--text-secondary-gray);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .feature-list-container {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .feature-list-item {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: linear-gradient(90deg, rgba(56, 161, 105, 0.1) 0%, rgba(56, 161, 105, 0.05) 100%);
+            border-radius: 8px;
+            border-left: 4px solid var(--highlight-emerald-green);
+            transition: transform 0.2s ease;
+        }
+
+        .feature-list-item:hover {
+            transform: translateX(5px);
+        }
+
+        .feature-item-title {
+            font-weight: 600;
+            color: var(--primary-corporate-blue);
+            margin-bottom: 0.3rem;
+        }
+
+        .social-proof-testimonial-section {
+            background: var(--secondary-steel-gray);
+            color: white;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .testimonial-card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .individual-testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .whatsapp-floating-widget {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: breathe-effect 3s infinite;
+        }
+
+        @keyframes breathe-effect {
+            0%, 100% { transform: translateY(-50%) scale(1); }
+            50% { transform: translateY(-50%) scale(1.1); }
+        }
+
+        .whatsapp-icon-container {
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            position: relative;
+        }
+
+        .whatsapp-notification-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ff4444;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            animation: bounce-notification 2s infinite;
+        }
+
+        @keyframes bounce-notification {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        .bottom-floating-cta-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+            animation: breathing-cta 2.5s infinite;
+        }
+
+        @keyframes breathing-cta {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.05); }
+        }
+
+        .extended-floating-button {
+            background: var(--highlight-emerald-green);
+            color: white;
+            border: none;
+            padding: 1rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 25px rgba(56, 161, 105, 0.4);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            min-width: 280px;
+        }
+
+        .extended-floating-button:hover {
+            background: #2f855a;
+            transform: translateX(-50%) translateY(-3px);
+            box-shadow: 0 8px 35px rgba(56, 161, 105, 0.6);
+        }
+
+        .footer-copyright-section {
+            background: var(--secondary-steel-gray);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .legal-disclaimer-text {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin: 0.5rem 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section-primary {
+                padding: 2rem 0;
+            }
+            
+            .content-section-block {
+                margin: 2rem 0;
+                padding: 1.5rem;
+            }
+            
+            .whatsapp-floating-widget {
+                right: 15px;
+            }
+            
+            .whatsapp-icon-container {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .extended-floating-button {
+                min-width: 250px;
+                padding: 0.9rem 2rem;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-sections-container {
+                padding: 0 0.5rem;
+            }
+            
+            .extended-floating-button {
+                min-width: 90%;
+                left: 5%;
+                transform: none;
+            }
+            
+            .bottom-floating-cta-button {
+                left: 5%;
+                right: 5%;
+                transform: none;
+            }
+            
+            @keyframes breathing-cta {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.05); }
+            }
+        }
+    </style>
+</head>
+<body class="page-container-wrapper">
+    <header class="header-navigation-section">
+        <div class="navigation-container-fluid">
+            <h1 class="main-headline-typography">Покрените удаљени рад, зарадите 100-300$ дневно!</h1>
+            <p class="subheadline-descriptive-text">Претворите своја интересовања у каријеру кроз управљање друштвеним мрежама</p>
+        </div>
+    </header>
+
+    <main class="content-sections-container">
+        <section class="hero-section-primary">
+            <div class="featured-image-container">
+                <img src="img/1.jpg" alt="Професионални онлајн рад" class="responsive-professional-image">
+            </div>
+            <h2 class="section-heading-primary">Претворите своја интересовања у професију</h2>
+            <p class="paragraph-content-block">Придружите се нашем пројекту управљања друштвеним мрежама и покрените флексибилну каријеру! У овом дигиталном добу, друштвене мреже нису само алат за комуникацију, већ и платформа за стварање и дељење садржаја.</p>
+            <button class="primary-cta-button-enhanced" onclick="k2()">Придружи се одмах</button>
+        </section>
+
+        <section class="content-section-block">
+            <h2 class="section-heading-primary">Садржај посла</h2>
+            <p class="paragraph-content-block">Као наш менаџер друштвених мрежа, ваши главни задаци укључују:</p>
+            <ul class="feature-list-container">
+                <li class="feature-list-item">
+                    <div class="feature-item-title">Одржавање и управљање налозима</div>
+                    <div>Одговорни сте за наше налоге на друштвеним мрежама као што су WhatsApp, YouTube, TikTok и Instagram.</div>
+                </li>
+                <li class="feature-list-item">
+                    <div class="feature-item-title">Интеракција са заједницом</div>
+                    <div>Одговарање на коментаре и поруке, изградња добрих корисничких односа, побољшање имиџа бренда.</div>
+                </li>
+            </ul>
+            <div class="featured-image-container">
+                <img src="img/2.jpg" alt="Управљање друштвеним мрежама" class="responsive-professional-image">
+            </div>
+        </section>
+
+        <section class="content-section-block">
+            <h2 class="section-heading-primary">Процес пријављивања</h2>
+            <ul class="feature-list-container">
+                <li class="feature-list-item">
+                    <div class="feature-item-title">Кликните за тренутну пријаву</div>
+                    <div>Посетите нашу страницу за пријављивање и попуните основне информације.</div>
+                </li>
+                <li class="feature-list-item">
+                    <div class="feature-item-title">Завршите обуку вештина</div>
+                    <div>Учествујте у нашим онлајн курсевима обуке и савладајте неопходне вештине за управљање друштвеним мрежама.</div>
+                </li>
+                <li class="feature-list-item">
+                    <div class="feature-item-title">Почните са радом</div>
+                    <div>Након завршетка обуке, одмах ћете почети са радом од куће, уживајући у флексибилном распореду и приходима.</div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="content-section-block">
+            <h2 class="section-heading-primary">Предности придруживања</h2>
+            <ul class="feature-list-container">
+                <li class="feature-list-item">
+                    <div class="feature-item-title">Без депозита</div>
+                    <div>Не наплаћујемо никакав депозит, можете се безбедно придружити без бриге о додатним трошковима.</div>
+                </li>
+                <li class="feature-list-item">
+                    <div class="feature-item-title">Без ограничења година</div>
+                    <div>Независно од ваших година, ако волите друштвене мреже, можете се пријавити да се придружите нама.</div>
+                </li>
+                <li class="feature-list-item">
+                    <div class="feature-item-title">Аутоматско плаћање</div>
+                    <div>Након завршетка дневног рада, аутоматски ћемо уплатити ваш приход на ваш одређени рачун.</div>
+                </li>
+            </ul>
+            <div class="featured-image-container">
+                <img src="img/3.jpg" alt="Предности посла" class="responsive-professional-image">
+            </div>
+            <button class="primary-cta-button-enhanced" onclick="k2()">Придружи се одмах</button>
+        </section>
+
+        <section class="social-proof-testimonial-section">
+            <h2 class="section-heading-primary" style="color: white;">Потребни су нам људи који:</h2>
+            <div class="testimonial-card-container">
+                <div class="individual-testimonial-card">
+                    <h3>Воле друштвене мреже</h3>
+                    <p>Требало би да будете страствени према друштвеним мрежама и познајете рад и потребе корисника главних платформи.</p>
+                </div>
+                <div class="individual-testimonial-card">
+                    <h3>Флексибилно радно време</h3>
+                    <p>Можете организовати рад према свом распореду, изабрати погодне проjекте и уживати у слободном начину рада.</p>
+                </div>
+                <div class="individual-testimonial-card">
+                    <h3>Правовремено плаћање</h3>
+                    <p>Платићемо вам одговарајућу накнаду на основу ваших радних сати и перформанси, обезбеђујући да ваш труд буде награђен.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section-block">
+            <h2 class="section-heading-primary">Придружите се нама и уживајте у лепоти и приходима</h2>
+            <ul class="feature-list-container">
+                <li class="feature-list-item">
+                    <div class="feature-item-title">Стварање и дељење</div>
+                    <div>На овој слободној платформи можете у потпуности искористити креативност, створити изузетан садржај и показати свој таленат.</div>
+                </li>
+                <li class="feature-list-item">
+                    <div class="feature-item-title">Удаљени рад</div>
+                    <div>Независно од тога где се налазите, са само једним рачунаром и интернет везом можете започети рад и сарађивати са глобалним тимом.</div>
+                </li>
+                <li class="feature-list-item">
+                    <div class="feature-item-title">Лични развој</div>
+                    <div>Кроз сарадњу са нама, добићете драгоцено искуство и вештине, побољшати лични бренд и професионални развој.</div>
+                </li>
+            </ul>
+            <div class="featured-image-container">
+                <img src="img/4.jpg" alt="Професионални развој" class="responsive-professional-image">
+            </div>
+            <button class="primary-cta-button-enhanced" onclick="k2()">Придружи се одмах</button>
+        </section>
+
+        <section class="content-section-block">
+            <h2 class="section-heading-primary">Пријавите се одмах и покрените ново професионално путовање!</h2>
+            <p class="paragraph-content-block">Ако сте спремни да претворите интересовања у професију, придружите се нашем тиму за управљање друштвеним мрежама. Заједно ћемо стварати изузетне ствари у свету друштвених мрежа, уживати у радним задовољствима и зарађивати идеалне приходе.</p>
+            <button class="primary-cta-button-enhanced" onclick="k2()">Почни одмах</button>
+        </section>
+    </main>
+
+    <div class="whatsapp-floating-widget" onclick="k2()">
+        <div class="whatsapp-icon-container">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.951 3.297"/>
+            </svg>
+            <div class="whatsapp-notification-badge">1</div>
+        </div>
+    </div>
+
+    <div class="bottom-floating-cta-button">
+        <button class="extended-floating-button" onclick="k2()">🚀 Почни зарађивати одмах!</button>
+    </div>
+
+    <footer class="footer-copyright-section">
+        <div class="navigation-container-fluid">
+            <div class="legal-links-container" style="margin-bottom: 1.5rem;">
+                <a href="Privacy.html" target="_blank" style="color: #d69e2e; text-decoration: none; margin: 0 1rem; font-weight: 500;">Политика приватности</a>
+                <span style="color: #718096;">|</span>
+                <a href="terms.html" target="_blank" style="color: #d69e2e; text-decoration: none; margin: 0 1rem; font-weight: 500;">Услови коришћења</a>
+            </div>
+            
+            <div class="disclaimer-section" style="background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem;">
+                <h3 style="color: #d69e2e; margin-bottom: 1rem; font-size: 1.1rem;">Одрицање од одговорности</h3>
+                <p class="legal-disclaimer-text"> Сви приходи и резултати приказани на овој страници су хипотетички и не представљају гаранцију будућих зарада.</p>
+                <p class="legal-disclaimer-text">Успех у било ком онлајн послу зависи од многих фактора укључујући, али не ограничавајући се на: индивидуалне вештине, посвећеност, тржишне услове и економске факторе.</p>
+                <p class="legal-disclaimer-text">Не дајемо никакве гаранције о приходима, профитима или успеху. Свако учешће у нашим програмима је на сопствену одговорност.</p>
+                <p class="legal-disclaimer-text">Молимо вас да се консултујете са правним и финансијским саветницима пре доношења било каквих пословних одлука.</p>
+                <p class="legal-disclaimer-text">Ова понуда може бити ограничена по времену и подложна је променама без претходне најаве.</p>
+                <p class="legal-disclaimer-text">Задржавамо право да одбијемо или прекинемо пружање услуга било коме у било које време без објашњења.</p>
+            </div>
+            
+            <p class="legal-disclaimer-text">© 2024 Сва права задржана. Ова веб страница је намењена искључиво информативним сврхама.</p>
+            <p class="legal-disclaimer-text">За питања о приватности и употреби података, контактирајте нас преко службених канала.</p>
+            <p class="legal-disclaimer-text">Регистровано у Републици Србији у складу са важећим законским прописима.</p>
+        </div>
+    </footer>
+
+    <script>
+      
+
+        // Темные/светлые темы поддержка
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // Улучшенная прокрутка и взаимодействие
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.content-section-block').forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        // Предотвращение масштабирования
+        document.addEventListener('touchstart', function(event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+    </script>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Услови коришћења - Правила и одредбе</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary-corporate-blue: #1a365d;
+            --secondary-steel-gray: #2d3748;
+            --accent-professional-gold: #d69e2e;
+            --background-pristine-white: #ffffff;
+            --text-primary-dark: #2d3748;
+            --text-secondary-gray: #4a5568;
+            --highlight-emerald-green: #38a169;
+            --shadow-depth-primary: 0 10px 25px rgba(26, 54, 93, 0.15);
+            --shadow-depth-secondary: 0 5px 15px rgba(45, 55, 72, 0.1);
+            --gradient-professional: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+        }
+
+        .terms-page-container {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary-dark);
+            background: var(--background-pristine-white);
+            min-height: 100vh;
+        }
+
+        .terms-header-section {
+            background: var(--gradient-professional);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: var(--shadow-depth-primary);
+            text-align: center;
+        }
+
+        .terms-header-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .terms-header-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .terms-content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        .terms-section-block {
+            margin: 2.5rem 0;
+            padding: 2rem;
+            background: var(--background-pristine-white);
+            border-radius: 15px;
+            box-shadow: var(--shadow-depth-secondary);
+            border-left: 5px solid var(--accent-professional-gold);
+        }
+
+        .terms-section-heading {
+            color: var(--primary-corporate-blue);
+            font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(214, 158, 46, 0.3);
+        }
+
+        .terms-paragraph-content {
+            margin: 1.2rem 0;
+            color: var(--text-secondary-gray);
+            font-size: 1rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .terms-list-container {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .terms-list-item {
+            margin: 0.8rem 0;
+            color: var(--text-secondary-gray);
+            line-height: 1.7;
+        }
+
+        .terms-highlight-box {
+            background: linear-gradient(90deg, rgba(214, 158, 46, 0.1) 0%, rgba(214, 158, 46, 0.05) 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-professional-gold);
+            margin: 1.5rem 0;
+        }
+
+        .terms-warning-box {
+            background: linear-gradient(90deg, rgba(229, 62, 62, 0.1) 0%, rgba(229, 62, 62, 0.05) 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #e53e3e;
+            margin: 1.5rem 0;
+        }
+
+        .terms-contact-section {
+            background: var(--secondary-steel-gray);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .terms-back-button {
+            background: var(--highlight-emerald-green);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: var(--shadow-depth-secondary);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 2rem 0;
+        }
+
+        .terms-back-button:hover {
+            background: #2f855a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(56, 161, 105, 0.4);
+        }
+
+        .terms-footer-section {
+            background: var(--secondary-steel-gray);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .terms-footer-text {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin: 0.5rem 0;
+        }
+
+        .terms-effective-date {
+            background: rgba(214, 158, 46, 0.1);
+            color: var(--primary-corporate-blue);
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .terms-content-container {
+                padding: 2rem 0.5rem;
+            }
+            
+            .terms-section-block {
+                margin: 1.5rem 0;
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .terms-content-container {
+                padding: 1.5rem 0.3rem;
+            }
+            
+            .terms-section-block {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="terms-page-container">
+    <header class="terms-header-section">
+        <h1 class="terms-header-title">Услови коришћења</h1>
+        <p class="terms-header-subtitle">Правила и одредбе коришћења наших услуга</p>
+    </header>
+
+    <main class="terms-content-container">
+        <div class="terms-effective-date">
+            Ови услови коришћења су на снази од: 1. јануара 2025. године
+        </div>
+
+        <section class="terms-section-block">
+            <h2 class="terms-section-heading">1. Прихватање услова</h2>
+            <p class="terms-paragraph-content">
+                Приступањем и коришћењем ове веб странице и наших услуга, слажете се да се придржавате и да ћете бити везани овим Условима коришћења. Ако се не слажете са било којим делом ових услова, не смете користити наше услуге.
+            </p>
+            <div class="terms-warning-box">
+                <p class="terms-paragraph-content">
+                    <strong>Важно:</strong> Ови услови представљају правно обавезујући договор између вас и наше компаnije. Молимо вас да их пажљиво прочитате.
+                </p>
+            </div>
+        </section>
+
+        <section class="terms-section-block">
+            <h2 class="terms-section-heading">2. Дефиниције</h2>
+            <ul class="terms-list-container">
+                <li class="terms-list-item"><strong>"Услуге"</strong> - све услуге које пружамо кроз нашу веб страницу</li>
+                <li class="terms-list-item"><strong>"Корисник"</strong> - свако лице које приступа или користи наше услуге</li>
+                <li class="terms-list-item"><strong>"Садржај"</strong> - сав текст, слике, видео и други материјали на веб страници</li>
+                <li class="terms-list-item"><strong>"Рачун"</strong> - кориснички профил створен за приступ нашим услугама</li>
+            </ul>
+        </section>
+
+        <section class="terms-section-block">
+            <h2 class="terms-section-heading">3. Услови коришћења услуга</h2>
+            <p class="terms-paragraph-content">Када користите наше услуге, обавезујете се да:</p>
+            <ul class="terms-list-container">
+                <li class="terms-list-item">Пружите тачне и потпуне информације приликом регистрације</li>
+                <li class="terms-list-item">Одржавате безбедност својих приступних података</li>
+                <li class="terms-list-item">Користите услуге у складу са важећим законима</li>
+                <li class="terms-list-item">Не злоупотребљавате или не ометате рад наших система</li>
+                <li class="terms-list-item">Не кршите права интелектуалне својине</li>
+                <li class="terms-list-item">Не шаљете спам или малициозни садржај</li>
+            </ul>
+        </section>
+
+        <section class="terms-section-block">
+            <h2 class="terms-section-heading">4. Забрањене активности</h2>
+            <p class="terms-paragraph-content">Следеће активности су строго забрањене:</p>
+            <ul class="terms-list-container">
+                <li class="terms-list-item">Коришћење аутоматизованих система за приступ нашим услугама</li>
+                <li class="terms-list-item">Покушај неовлашћеног приступа туђим рачунима</li>
+                <li class="terms-list-item">Дистрибуција вируса или малициозног софтвера</li>
+                <li class="terms-list-item">Узнемиравање или претње другим корисницима</li>
+                <li class="terms-list-item">Преварне или обмањујуће активности</li>
+                <li class="terms-list-item">Кршење било којих важećих закона или прописа</li>
+            </ul>
+        </section>
+
+        <section class="terms-section-block">
+            <h2 class="terms-section-heading">5. Интелектуална својина</h2>
+            <p class="terms-paragraph-content">
+                Сав садржај на нашој веб страници, укључујући текст, слике, логотипове, видео материјале и софтвер, заштићен је ауторским правима и другим правима интелектуалне својине. Забрањено је копирање, дистрибуција или коммерцијална употреба без писане дозволе.
+            </p>
+            <div class="terms-highlight-box">
+                <p class="terms-paragraph-content">
+                    Задржавамо сва права на наш садржај и можемо предузети правне мере против неовлашћене употребе.
+                </p>
+            </div>
+        </section>
+
+        <section class="terms-section-block">
+            <h2 class="terms-section-heading">6. Кориснички садржај</h2>
+            <p class="terms-paragraph-content">
+                Када на нашу платформу постављате садржај (текст, слике, документе), задржавате власништво над тим садржајем, али нам дајете лиценцу за његово коришћење у сврху пружања услуга.
+            </p>
+            <p class="terms-paragraph-content">Одговорни сте за:</p>
+            <ul class="terms-list-container">
+                <li class="terms-list-item">Легалност и тачност садржаја који постављате</li>
+                <li class="terms-list-item">Поштовање права других лица</li>
+                <li class="terms-list-item">Непостављање неприкладног или штетног садржаја</li>
+            </ul>
+        </section>
+
+        <section class="terms-section-block">
+            <h2 class="terms-section-heading">7. Приватност и заштита података</h2>
+            <p class="terms-paragraph-content">
+                Прикупљање и коришћење ваших личних података регулисано је нашом Политиком приватности, која чини саставни део ових Услова коришћења. Препоручујемо вам да прочитате нашу Политику приватности.
+            </p>
+        </section>
+
+        <section class="terms-section-block">
+            <h2 class="terms-section-heading">8. Одрицање од одговорности</h2>
+            <div class="terms-warning-box">
+                <p class="terms-paragraph-content">
+                    <strong>Важно упозорење:</strong> Наше услуге се пружају "како јесу" без икаквих гаранција. Не гарантујемо да ће услуге бити непрекидне, безбедне или без грешака.
+                </p>
+            </div>
+            <p class="terms-paragraph-content">Не сносимо одговорност за:</p>
+            <ul class="terms-list-container">
+                <li class="terms-list-item">Директне, индиректне или случајне штете</li>
+                <li class="terms-list-item">Губитак података или пословних прилика</li>
+                <li class="terms-list-item">Прекиде у раду услуга</li>
+                <li class="terms-list-item">Штете настале услед хаковања или безбедносних инцидената</li>
+            </ul>
+        </section>
+
+        <section class="terms-section-block">
+            <h2 class="terms-section-heading">9. Ограничење одговорности</h2>
+            <p class="terms-paragraph-content">
+                У максималној мери дозвољеној законом, наша укупна одговорност према вама за било које захтеве који произлазе из ових услова или коришћења услуга неће превазићи износ који сте нам платили у периоду од 12 месеци пре настанка захтева.
+            </p>
+        </section>
+
+        <section class="terms-section-block">
+            <h2 class="terms-section-heading">10. Престанак услуга</h2>
+            <p class="terms-paragraph-content">Можемо прекинути или суспендовати ваш приступ услугама у следећим случајевима:</p>
+            <ul class="terms-list-container">
+                <li class="terms-list-item">Кршење ових Услова коришћења</li>
+                <li class="terms-list-item">Сумња на преварну или незаконитну активност</li>
+                <li class="terms-list-item">На ваш захтев</li>
+                <li class="terms-list-item">Из пословних разлога уз претходно обавештење</li>
+            </ul>
+        </section>
+
+        <section class="terms-section-block">
+            <h2 class="terms-section-heading">11. Измене услова</h2>
+            <p class="terms-paragraph-content">
+                Задржавамо право да изменимо ове Услове коришћења у било које време. О значајним променама ћемо вас обавестити путем имејла или истакнуте напомене на веб страници. Наставак коришћења услуга након измена означава прихватање нових услова.
+            </p>
+        </section>
+
+        <section class="terms-section-block">
+            <h2 class="terms-section-heading">12. Важећи закон и надлежност</h2>
+            <p class="terms-paragraph-content">
+                Ови Услови коришћења регулисани су законима Републике Србије. Сви спорови који настану биће решавани пред надлежним судовима у Београду, Србија.
+            </p>
+        </section>
+
+        <section class="terms-section-block">
+            <h2 class="terms-section-heading">13. Разно</h2>
+            <ul class="terms-list-container">
+                <li class="terms-list-item">Ако било која одредба ових услова буде проглашена неважећом, остале одредбе остају на снази</li>
+                <li class="terms-list-item">Наше неделовање по било којој одредби не представља одрицање од права</li>
+                <li class="terms-list-item">Ови услови представљају потпуни споразум између нас</li>
+                <li class="terms-list-item">Не можете пренети своја права без наше писане сагласности</li>
+            </ul>
+        </section>
+
+        <div class="terms-contact-section">
+            <h2 class="terms-section-heading" style="color: white; border-bottom: none;">Контакт за правна питања</h2>
+            <p style="color: white; margin: 1rem 0;">
+                За питања у вези са овим Условима коришћења, можете нас контактирати:
+            </p>
+            <p style="color: #d69e2e; font-weight: 600; margin: 1rem 0;">
+                Имејл: privacysaiern2323@hotmail.com 
+            </p>
+        </div>
+
+        <a href="javascript:history.back()" class="terms-back-button">← Назад на главну страницу</a>
+    </main>
+
+    <footer class="terms-footer-section">
+        <p class="terms-footer-text">© 2025 Сва права задржана. Услови коришћења у складу са српским законодавством.</p>
+        <p class="terms-footer-text">Последње ажурирано: Јануар 2025</p>
+    </footer>
+
+    <script>
+        // Темне/светле теме подршка
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // Предотвращение масштабирования
+        document.addEventListener('touchstart', function(event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+
+        // Плавно скроловање до секција
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.terms-section-block');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

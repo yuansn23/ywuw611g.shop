@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>भारत के सबसे लोकप्रिय ऑनलाइन गेम</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+        .game-card {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(145deg, #2d1b69, #11998e);
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
+        }
+        .game-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,215,0,0.2), transparent);
+            transform: rotate(45deg);
+            transition: all 0.5s;
+            opacity: 0;
+        }
+        .game-card:hover::before {
+            animation: shine 0.7s ease-in-out;
+        }
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); opacity: 0; }
+        }
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+            to { box-shadow: 0 0 30px rgba(255, 215, 0, 0.8); }
+        }
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+        .carousel-track {
+            display: flex;
+            animation: scroll 20s linear infinite;
+        }
+        .carousel-item {
+            flex: 0 0 auto;
+            margin-right: 20px;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .pulse-glow {
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+            50% { box-shadow: 0 0 25px rgba(255, 215, 0, 0.8); }
+        }
+        .breathing-effect {
+            animation: breathing 3s ease-in-out infinite;
+        }
+        @keyframes breathing {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(255, 215, 0, 0.8);
+            }
+        }
+        .fire-animation {
+            animation: fire 1.5s ease-in-out infinite;
+        }
+        @keyframes fire {
+            0%, 100% { text-shadow: 0 0 5px #ff4500; }
+            50% { text-shadow: 0 0 20px #ff4500, 0 0 30px #ff6347; }
+        }
+        .blink {
+            animation: blink 2s ease-in-out infinite;
+        }
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0.5; }
+        }
+        .money-rain {
+            animation: moneyRain 3s ease-in-out infinite;
+        }
+        @keyframes moneyRain {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-5px) rotate(5deg); }
+            75% { transform: translateY(-3px) rotate(-5deg); }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5D5CDE',
+                        gameGold: '#FFD700',
+                        gamePurple: '#6B46C1',
+                        gameBlue: '#1E40AF'
+                    }
+                }
+            }
+        }
+        
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="text-center py-8 bg-gradient-to-r from-purple-800 via-blue-800 to-indigo-800">
+        <!-- Logo -->
+        <div class="mb-6">
+            <img src="https://www.ywuw611g.shop/yd/8.jpg" 
+                 alt="Logo" 
+                 class="mx-auto h-20 w-auto rounded-lg glow-effect">
+        </div>
+        
+        <!-- Title -->
+        <h1 class="text-3xl md:text-5xl font-bold text-gameGold">
+            भारत के सबसे लोकप्रिय ऑनलाइन गेम
+        </h1>
+    </header>
+
+    <!-- Carousel Section -->
+    <section class="py-8 carousel-container">
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <!-- First set -->
+                <div class="carousel-item">
+                    <img src="https://www.ywuw611g.shop/yd/1.jpg" alt="Game 1" class="h-32 w-48 object-cover rounded-lg pulse-glow">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.ywuw611g.shop/yd/2.jpg" alt="Game 2" class="h-32 w-48 object-cover rounded-lg pulse-glow">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.ywuw611g.shop/yd/3.jpg" alt="Game 3" class="h-32 w-48 object-cover rounded-lg pulse-glow">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.ywuw611g.shop/yd/4.jpg" alt="Game 4" class="h-32 w-48 object-cover rounded-lg pulse-glow">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.ywuw611g.shop/yd/5.jpg" alt="Game 5" class="h-32 w-48 object-cover rounded-lg pulse-glow">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.ywuw611g.shop/yd/6.jpg" alt="Game 6" class="h-32 w-48 object-cover rounded-lg pulse-glow">
+                </div>
+                 
+                <!-- Duplicate set for seamless loop -->
+                <div class="carousel-item">
+                    <img src="https://www.ywuw611g.shop/yd/1.jpg" alt="Game 1" class="h-32 w-48 object-cover rounded-lg pulse-glow">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.ywuw611g.shop/yd/2.jpg" alt="Game 2" class="h-32 w-48 object-cover rounded-lg pulse-glow">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.ywuw611g.shop/yd/3.jpg" alt="Game 3" class="h-32 w-48 object-cover rounded-lg pulse-glow">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.ywuw611g.shop/yd/4.jpg" alt="Game 4" class="h-32 w-48 object-cover rounded-lg pulse-glow">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.ywuw611g.shop/yd/5.jpg" alt="Game 5" class="h-32 w-48 object-cover rounded-lg pulse-glow">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.ywuw611g.shop/yd/6.jpg" alt="Game 6" class="h-32 w-48 object-cover rounded-lg pulse-glow">
+                </div>
+                 
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Button after Carousel -->
+    <section class="text-center py-8 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900">
+        <button onclick="shareGame()" class="breathing-effect bg-gradient-to-r from-gameGold to-yellow-500 text-black text-xl font-bold py-4 px-8 rounded-full shadow-lg hover:from-yellow-400 hover:to-gameGold transition-all duration-300">
+            अभी साझा करें
+        </button>
+    </section>
+
+    <!-- Earn Money Section -->
+    <section class="py-16 bg-gradient-to-r from-green-800 via-emerald-800 to-teal-800">
+        <div class="container mx-auto px-4">
+            <!-- Title -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-6xl font-bold text-gameGold mb-4 fire-animation">
+                    दोस्तों को शेयर करें नकद कमाएं
+                </h2>
+                <div class="text-2xl md:text-3xl font-bold text-white money-rain">
+                    💰 आसानी से 20 लाख कमाएं! 💰
+                </div>
+            </div>
+
+             
+        </div>
+    </section>
+
+    <!-- Games List -->
+    <section class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <!-- Game 1 -->
+            <div class="game-card rounded-lg overflow-hidden shadow-md">
+                <div class="relative">
+                    <img src="https://www.ywuw611g.shop/yd/1.jpg" 
+                         alt="Game 1" 
+                         class="w-full h-48 object-cover">
+                    <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold fire-animation">
+                        🔥 HOT
+                    </div>
+                    <div class="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded-lg text-xs font-bold blink">
+                        ऑनलाइन: 45,672
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-yellow-500 text-black px-2 py-1 rounded-lg text-xs font-bold">
+                        ⭐ 4.8/5
+                    </div>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+
+            <!-- Game 2 -->
+            <div class="game-card rounded-lg overflow-hidden shadow-md">
+                <div class="relative">
+                    <img src="https://www.ywuw611g.shop/yd/2.jpg" 
+                         alt="Game 2" 
+                         class="w-full h-48 object-cover">
+                    <div class="absolute top-2 left-2 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                        🆕 NEW
+                    </div>
+                    <div class="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded-lg text-xs font-bold blink">
+                        ऑनलाइन: 32,451
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-yellow-500 text-black px-2 py-1 rounded-lg text-xs font-bold">
+                        ⭐ 4.6/5
+                    </div>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+
+            <!-- Game 3 -->
+            <div class="game-card rounded-lg overflow-hidden shadow-md">
+                <div class="relative">
+                    <img src="https://www.ywuw611g.shop/yd/3.jpg" 
+                         alt="Game 3" 
+                         class="w-full h-48 object-cover">
+                    <div class="absolute top-2 left-2 bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                        👑 VIP
+                    </div>
+                    <div class="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded-lg text-xs font-bold blink">
+                        ऑनलाइन: 28,934
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-yellow-500 text-black px-2 py-1 rounded-lg text-xs font-bold">
+                        ⭐ 4.9/5
+                    </div>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+
+            <!-- Game 4 -->
+            <div class="game-card rounded-lg overflow-hidden shadow-md">
+                <div class="relative">
+                    <img src="https://www.ywuw611g.shop/yd/4.jpg" 
+                         alt="Game 4" 
+                         class="w-full h-48 object-cover">
+                    <div class="absolute top-2 left-2 bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                        💰 BONUS
+                    </div>
+                    <div class="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded-lg text-xs font-bold blink">
+                        ऑनलाइन: 51,287
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-yellow-500 text-black px-2 py-1 rounded-lg text-xs font-bold">
+                        ⭐ 4.7/5
+                    </div>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+
+            <!-- Game 5 -->
+            <div class="game-card rounded-lg overflow-hidden shadow-md">
+                <div class="relative">
+                    <img src="https://www.ywuw611g.shop/yd/5.jpg" 
+                         alt="Game 5" 
+                         class="w-full h-48 object-cover">
+                    <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold fire-animation">
+                        🚀 TRENDING
+                    </div>
+                    <div class="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded-lg text-xs font-bold blink">
+                        ऑनलाइन: 39,156
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-yellow-500 text-black px-2 py-1 rounded-lg text-xs font-bold">
+                        ⭐ 4.5/5
+                    </div>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+
+            <!-- Game 6 -->
+            <div class="game-card rounded-lg overflow-hidden shadow-md">
+                <div class="relative">
+                    <img src="https://www.ywuw611g.shop/yd/6.jpg" 
+                         alt="Game 6" 
+                         class="w-full h-48 object-cover">
+                    <div class="absolute top-2 left-2 bg-pink-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                        💎 PREMIUM
+                    </div>
+                    <div class="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded-lg text-xs font-bold blink">
+                        ऑनलाइन: 42,783
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-yellow-500 text-black px-2 py-1 rounded-lg text-xs font-bold">
+                        ⭐ 4.8/5
+                    </div>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+
+         
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="text-center py-12 bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900">
+        <button onclick="shareGame()" class="breathing-effect bg-gradient-to-r from-gameGold to-yellow-500 text-black text-xl font-bold py-4 px-8 rounded-full shadow-lg hover:from-yellow-400 hover:to-gameGold transition-all duration-300">
+            अभी साझा करें
+        </button>
+    </section>
+
+    <script>
+        function shareGame() {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
+            modal.innerHTML = `
+                <div class="bg-gradient-to-br from-purple-800 to-indigo-800 p-6 rounded-lg shadow-2xl max-w-sm w-full border border-gameGold">
+                    <h3 class="text-gameGold text-xl font-bold mb-4 text-center">गेम साझा करें</h3>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <button onclick="shareToWhatsApp()" class="bg-green-500 text-white py-3 px-4 rounded-lg font-bold hover:bg-green-600 transition-colors">
+                            WhatsApp
+                        </button>
+                        <button onclick="shareToTelegram()" class="bg-blue-500 text-white py-3 px-4 rounded-lg font-bold hover:bg-blue-600 transition-colors">
+                            Telegram
+                        </button>
+                        <button onclick="copyLink()" class="bg-purple-500 text-white py-3 px-4 rounded-lg font-bold hover:bg-purple-600 transition-colors">
+                            लिंक कॉपी करें
+                        </button>
+                        <button onclick="shareToFacebook()" class="bg-blue-700 text-white py-3 px-4 rounded-lg font-bold hover:bg-blue-800 transition-colors">
+                            Facebook
+                        </button>
+                    </div>
+                    <button onclick="this.closest('.fixed').remove()" class="w-full bg-gradient-to-r from-gray-600 to-gray-700 text-white py-2 px-4 rounded-lg hover:from-gray-500 hover:to-gray-600 transition-colors">
+                        बंद करें
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        function shareToWhatsApp() {
+            const text = "भारत के सबसे लोकप्रिय ऑनलाइन गेम";
+            const url = `https://wa.me/?text=${encodeURIComponent(text + " " + window.location.href)}`;
+            window.open(url, '_blank');
+            document.querySelector('.fixed').remove();
+        }
+
+        function shareToTelegram() {
+            const text = "भारत के सबसे लोकप्रिय ऑनलाइन गेम";
+            const url = `https://t.me/share/url?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+            document.querySelector('.fixed').remove();
+        }
+
+        function shareToFacebook() {
+            const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`;
+            window.open(url, '_blank');
+            document.querySelector('.fixed').remove();
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const toast = document.createElement('div');
+                toast.className = 'fixed top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+                toast.textContent = 'लिंक कॉपी हो गया';
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 3000);
+                document.querySelector('.fixed').remove();
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Политика приватности - Заштита ваших личних података</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary-corporate-blue: #1a365d;
+            --secondary-steel-gray: #2d3748;
+            --accent-professional-gold: #d69e2e;
+            --background-pristine-white: #ffffff;
+            --text-primary-dark: #2d3748;
+            --text-secondary-gray: #4a5568;
+            --highlight-emerald-green: #38a169;
+            --shadow-depth-primary: 0 10px 25px rgba(26, 54, 93, 0.15);
+            --shadow-depth-secondary: 0 5px 15px rgba(45, 55, 72, 0.1);
+            --gradient-professional: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+        }
+
+        .privacy-page-container {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary-dark);
+            background: var(--background-pristine-white);
+            min-height: 100vh;
+        }
+
+        .privacy-header-section {
+            background: var(--gradient-professional);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: var(--shadow-depth-primary);
+            text-align: center;
+        }
+
+        .privacy-header-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .privacy-header-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .privacy-content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        .privacy-section-block {
+            margin: 2.5rem 0;
+            padding: 2rem;
+            background: var(--background-pristine-white);
+            border-radius: 15px;
+            box-shadow: var(--shadow-depth-secondary);
+            border-left: 5px solid var(--accent-professional-gold);
+        }
+
+        .privacy-section-heading {
+            color: var(--primary-corporate-blue);
+            font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(214, 158, 46, 0.3);
+        }
+
+        .privacy-paragraph-content {
+            margin: 1.2rem 0;
+            color: var(--text-secondary-gray);
+            font-size: 1rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .privacy-list-container {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .privacy-list-item {
+            margin: 0.8rem 0;
+            color: var(--text-secondary-gray);
+            line-height: 1.7;
+        }
+
+        .privacy-highlight-box {
+            background: linear-gradient(90deg, rgba(214, 158, 46, 0.1) 0%, rgba(214, 158, 46, 0.05) 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-professional-gold);
+            margin: 1.5rem 0;
+        }
+
+        .privacy-contact-section {
+            background: var(--secondary-steel-gray);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .privacy-back-button {
+            background: var(--highlight-emerald-green);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: var(--shadow-depth-secondary);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 2rem 0;
+        }
+
+        .privacy-back-button:hover {
+            background: #2f855a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(56, 161, 105, 0.4);
+        }
+
+        .privacy-footer-section {
+            background: var(--secondary-steel-gray);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .privacy-footer-text {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin: 0.5rem 0;
+        }
+
+        .privacy-effective-date {
+            background: rgba(214, 158, 46, 0.1);
+            color: var(--primary-corporate-blue);
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .privacy-content-container {
+                padding: 2rem 0.5rem;
+            }
+            
+            .privacy-section-block {
+                margin: 1.5rem 0;
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .privacy-content-container {
+                padding: 1.5rem 0.3rem;
+            }
+            
+            .privacy-section-block {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="privacy-page-container">
+    <header class="privacy-header-section">
+        <h1 class="privacy-header-title">Политика приватности</h1>
+        <p class="privacy-header-subtitle">Заштита ваших личних података је наш приоритет</p>
+    </header>
+
+    <main class="privacy-content-container">
+        <div class="privacy-effective-date">
+            Ова политика приватности је на снази од: 1. јануара 2025. године
+        </div>
+
+        <section class="privacy-section-block">
+            <h2 class="privacy-section-heading">1. Увод</h2>
+            <p class="privacy-paragraph-content">
+                Добродошли на нашу веб страницу за запошљавање и управљање друштвеним мрежама. Ова Политика приватности објашњава како прикупљамо, користимо, чувамо и штитимо ваше личне податке када посећујете нашу веб страницу или користите наше услуге.
+            </p>
+            <p class="privacy-paragraph-content">
+                Приступањем нашој веб страници и коришћењем наших услуга, слажете се са практикама описаним у овој Политици приватности. Ако се не слажете са овом политиком, молимо вас да не користите нашу веб страницу.
+            </p>
+        </section>
+
+        <section class="privacy-section-block">
+            <h2 class="privacy-section-heading">2. Подаци које прикупљамо</h2>
+            <p class="privacy-paragraph-content">Можемо прикупљати следеће типове информација:</p>
+            <ul class="privacy-list-container">
+                <li class="privacy-list-item">Лични подаци као што су име, имејл адреса, број телефона</li>
+                <li class="privacy-list-item">Професионалне информације укључујући искуство и вештине</li>
+                <li class="privacy-list-item">Техничке информације као што су IP адреса, тип прегледача, оперативни систем</li>
+                <li class="privacy-list-item">Информације о коришћењу веб странице и интеракцији са садржајем</li>
+                <li class="privacy-list-item">Колачиће (cookies) и сличне технологије за праћење</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section-block">
+            <h2 class="privacy-section-heading">3. Како користимо ваше податке</h2>
+            <p class="privacy-paragraph-content">Ваше личне податке користимо у следеће сврхе:</p>
+            <ul class="privacy-list-container">
+                <li class="privacy-list-item">Пружање и побољшање наших услуга запошљавања</li>
+                <li class="privacy-list-item">Комуникација са вама у вези са пословним могућностима</li>
+                <li class="privacy-list-item">Обрада пријава за посао и оцењивање кандидата</li>
+                <li class="privacy-list-item">Слање маркетиншких материјала и промоција (са вашом сагласношћу)</li>
+                <li class="privacy-list-item">Анализа коришћења веб странице и побољшање корисничког искуства</li>
+                <li class="privacy-list-item">Поштовање правних обавеза и заштита наших права</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section-block">
+            <h2 class="privacy-section-heading">4. Дељење података са трећим лицима</h2>
+            <p class="privacy-paragraph-content">
+                Не продајемо, не изнајмљујемо нити не размењујемо ваше личне податке са трећим лицима без ваше изричите сагласности, осим у следећим случајевима:
+            </p>
+            <ul class="privacy-list-container">
+                <li class="privacy-list-item">Када је то потребно за пружање услуга које сте захтевали</li>
+                <li class="privacy-list-item">Са поузданим партнерима који нам помажу у пословању (под строгим условима поверљивости)</li>
+                <li class="privacy-list-item">Када то захтева закон или правни процес</li>
+                <li class="privacy-list-item">За заштиту наших права, имовине или безбедности</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section-block">
+            <h2 class="privacy-section-heading">5. Безбедност података</h2>
+            <div class="privacy-highlight-box">
+                <p class="privacy-paragraph-content">
+                    Примењујемо одговарајуће техничке и организационе мере за заштиту ваших личних података од неовлашћеног приступа, коришћења, измене или уништавања. Ово укључује употребу енкрипције, сигурних сервера и редовне безбедносне провере.
+                </p>
+            </div>
+        </section>
+
+        <section class="privacy-section-block">
+            <h2 class="privacy-section-heading">6. Ваша права</h2>
+            <p class="privacy-paragraph-content">У складу са важећим законима о заштити података, имате следећа права:</p>
+            <ul class="privacy-list-container">
+                <li class="privacy-list-item">Право приступа - можете захтевати копију својих личних података</li>
+                <li class="privacy-list-item">Право исправке - можете захтевати исправку нетачних података</li>
+                <li class="privacy-list-item">Право брисања - можете захтевати брисање својих података</li>
+                <li class="privacy-list-item">Право ограничавања обраде - можете ограничити како користимо ваше податке</li>
+                <li class="privacy-list-item">Право на преносивост података - можете захтевати пренос података другом пружаоцу услуга</li>
+                <li class="privacy-list-item">Право приговора - можете се противити одређеним врстама обраде</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section-block">
+            <h2 class="privacy-section-heading">7. Колачићи (Cookies)</h2>
+            <p class="privacy-paragraph-content">
+                Наша веб страница користи колачиће за побољшање вашег искуства прегледања. Колачићи су мале текстуалне датотеке које се чувају на вашем уређају и помажу нам да анализирамо саобраћај на веб страници и прилагодимо садржај вашим потребама.
+            </p>
+            <p class="privacy-paragraph-content">
+                Можете контролисати употребу колачића кроз подешавања вашег прегледача, али имајте на уму да искључивање колачића може утицати на функционалност веб странице.
+            </p>
+        </section>
+
+        <section class="privacy-section-block">
+            <h2 class="privacy-section-heading">8. Задржавање података</h2>
+            <p class="privacy-paragraph-content">
+                Чуваћемо ваше личне податке онолико дуго колико је потребно за остваривање сврха за које су прикупљени, поштовање правних обавеза или решавање спорова. Период задржавања варира у зависности од типа података и правног основа за обраду.
+            </p>
+        </section>
+
+        <section class="privacy-section-block">
+            <h2 class="privacy-section-heading">9. Промене политике приватности</h2>
+            <p class="privacy-paragraph-content">
+                Задржавамо право да изменимо ову Политику приватности у било које време. О свим значајним променама ћемо вас обавестити путем имејла или истакнуте напомене на нашој веб страници. Препоручујемо вам да редовно прегледате ову политику.
+            </p>
+        </section>
+
+        <section class="privacy-section-block">
+            <h2 class="privacy-section-heading">10. Међународни трансфери података</h2>
+            <p class="privacy-paragraph-content">
+                Ваши подаци могу бити пренети и обрађени у земљама ван Републике Србије. У таквим случајевима, обезбеђујемо да се примењују одговарајуће заштитне мере у складу са важећим законима о заштити података.
+            </p>
+        </section>
+
+        <div class="privacy-contact-section">
+            <h2 class="privacy-section-heading" style="color: white; border-bottom: none;">Контактирајте нас</h2>
+            <p style="color: white; margin: 1rem 0;">
+                Ако имате питања о овој Политици приватности или желите да остварите своја права у вези са личним подацима, можете нас контактирати:
+            </p>
+            <p style="color: #d69e2e; font-weight: 600; margin: 1rem 0;">
+                Имејл: privacysaiern2323@hotmail.com<br> 
+            </p>
+        </div>
+
+        <a href="javascript:history.back()" class="privacy-back-button">← Назад на главну страницу</a>
+    </main>
+
+    <footer class="privacy-footer-section">
+        <p class="privacy-footer-text">© 2024 Сва права задржана. Политика приватности у складу са GDPR и српским законодавством.</p>
+        <p class="privacy-footer-text">Последње ажурирано: Јануар 2024</p>
+    </footer>
+
+    <script>
+        // Темне/светле теме подршка
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // Предотвращение масштабирования
+        document.addEventListener('touchstart', function(event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+
+        // Плавно скроловање до секција
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.privacy-section-block');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
